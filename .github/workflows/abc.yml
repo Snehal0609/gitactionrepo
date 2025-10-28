@@ -1,0 +1,23 @@
+# name the git hub action 
+name : first time use of github acion 
+# trigger this file 
+on :
+    push:
+        #event based trigger
+        branches:
+            -main 
+
+#defien the tasks 
+jobs :
+    prints:
+     runs-on : ubuntu-latest 
+ 
+     steps:
+      - name: checkout code 
+        uses: actions/checkout@v2
+      - name: setup python 
+        run: echo "this is python file "
+         
+
+
+
