@@ -19,7 +19,7 @@ jobs:
         run: echo "this is python file run successfully  " 
 
     job2:
-     runs-on: ubuntu-lastst
+     runs-on: ubuntu-latest
      needs: job1
      steps:
       - name: checkout code 
