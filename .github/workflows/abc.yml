@@ -9,14 +9,23 @@ on:
 
 #defien the tasks 
 jobs:
-    prints:
+    job1:
      runs-on: ubuntu-latest 
  
      steps:
       - name: checkout code 
         uses: actions/checkout@v2
       - name: setup python 
-        run: echo "this is python file run successfully  "
+        run: echo "this is python file run successfully  " 
+
+    job2:
+     runs-on: ubuntu-lastst
+     needs: job1
+     steps:
+      - name: checkout code 
+        uses: actions/checkout@v2
+      - name: second step
+        run: echo "this is python file seconds time run successfully  " 
          
 
 
