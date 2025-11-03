@@ -28,5 +28,12 @@ jobs:
         run: echo "this is python file seconds time run successfully  " 
          
 
-
+    job3:
+     runs-on: ubuntu-latest
+     needs: job2
+     steps:
+      - name: checkout code 
+        uses: actions/checkout@v2
+      - name: second step
+        run: echo "this is python file third time run successfully  " 
 
